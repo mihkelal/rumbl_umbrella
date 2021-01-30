@@ -23,7 +23,7 @@ defmodule RumblWeb.SessionController do
 
   def delete(conn, _params) do
     conn
-    |> RumblWeb.Auth.logout
+    |> RumblWeb.Auth.logout()
     |> redirect(to: Routes.page_path(conn, :index))
   end
 end
