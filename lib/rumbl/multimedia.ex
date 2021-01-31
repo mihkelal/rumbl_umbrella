@@ -6,7 +6,9 @@ defmodule Rumbl.Multimedia do
   alias Rumbl.Accounts
 
   def list_videos do
-    Repo.all(Video)
+    Video
+    |> Category.alphabetical()
+    |> Repo.all()
   end
 
   def get_video!(id), do: Repo.get!(Video, id)
