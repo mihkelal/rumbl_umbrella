@@ -18,6 +18,7 @@
               <li><%= link "LiveDashboard", to: Routes.live_dashboard_path(@conn, :home) %></li>
             <% end %>
             <%= if @current_user do %>
+              <li><%= link "My videos", to: Routes.video_path(@conn, :index) %></li>
               <li><%= link "Log out", to: Routes.session_path(@conn, :delete, @current_user), method: :delete, data: [confirm: "Really?"] %></li>
             <% else %>
               <li><%= link "Register", to: Routes.user_path(@conn, :new) %></li>
