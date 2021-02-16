@@ -15,8 +15,8 @@ let Player = {
       width: "420",
       videoId: playerId,
       events: {
-        onReady: onReady(),
-        onStateChange: this.onPlayerStateChange(),
+        onReady: onReady,
+        onStateChange: this.onPlayerStateChange,
       },
     });
   },
