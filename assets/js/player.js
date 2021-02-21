@@ -20,7 +20,9 @@ let Player = {
       },
     });
   },
-  onPlayerStateChange(event) {},
+  onPlayerStateChange(event) {
+    console.log(event);
+  },
   getCurrentTime() {
     return Math.floor(this.player.getCurrentTime() * 1000);
   },
