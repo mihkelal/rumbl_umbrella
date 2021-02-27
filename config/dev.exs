@@ -65,11 +65,7 @@ config :rumbl_web, RumblWeb.Endpoint,
     ]
   ]
 
-wolfram_app_id =
-  System.get_env("WOLFRAM_APP_ID") ||
-    raise """
-    environment variable WOLFRAM_APP_ID is missing.
-    """
+wolfram_app_id = System.get_env("WOLFRAM_APP_ID") || "R6JYXE-V88WQLE6HK"
 
 config :info_sys, :wolfram, app_id: wolfram_app_id
 
